@@ -1,35 +1,35 @@
 <div class="container">
     <h3>Cadastro de Carros:</h3>
-    <form>
+    <form #formCar="ngForm">
         <div class="row mb-3 mt-3">
             <label for="inputName" class="col-sm-1 col-form-label">Nome:</label>
             <div class="col-sm-10 offset-sm-1">
-                <input type="text" class="form-control" name="inputName" id="inputName">
+                <input type="text" class="form-control" [(ngModel)]="car.name" name="inputName" id="inputName" required>
             </div>
         </div>
 
         <div class="row mb-3 mt-3">
             <label for="inputAutomaker" class="col-sm-2 col-form-label">Montadora:</label>
             <div class="col-sm-10">
-                <input type="text" class="form-control" name="inputAutomaker" id="inputAutomaker">
+                <input type="text" class="form-control" [(ngModel)]="car.automaker" name="inputAutomaker" id="inputAutomaker" required>
             </div>
         </div>
 
         <div class="row mb-3 mt-3">
             <label for="inputPrice" class="col-sm-2 col-form-label">Preço:</label>
             <div class="col-sm-4">
-                <input type="text" class="form-control" name="inputPrice" id="inputPrice">
+                <input type="text" class="form-control" [(ngModel)]="car.price" name="inputPrice" id="inputPrice" required>
             </div>
 
             <label for="inputYear" class="col-sm-2 col-form-label">Ano:</label>
             <div class="col-sm-4">
-                <input type="text" class="form-control" name="inputYear" id="inputYear">
+                <input type="text" class="form-control" [(ngModel)]="car.year" name="inputYear" id="inputYear" required>
             </div>
         </div>
         
         <div class="row mb-3 mt-3">
             <div class="col-sm-4">
-                <button class="btn btn-primary">Salvar</button>
+                <button class="btn btn-primary" [disabled]="formCar.invalid">Salvar</button>
             </div>
         </div>
     </form>

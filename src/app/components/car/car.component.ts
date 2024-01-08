@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { Car } from '../../Car'
 
 @Component({
@@ -7,5 +7,8 @@ import { Car } from '../../Car'
   styleUrl: './car.component.css'
 })
 export class CarComponent {
+
+  @Input()
+  car : Car = { } as Car;
 
 }
