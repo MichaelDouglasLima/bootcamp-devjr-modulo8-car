@@ -12,4 +12,10 @@ export class CarsComponent {
 
   cars : Car[]  = [];
 
+  saveCar() {
+    this.car.id = this.cars.length + 1;
+    this.cars.push(this.car);
+    this.car = { } as Car; 
+  }
+
 }
