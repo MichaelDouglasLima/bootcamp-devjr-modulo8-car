@@ -7,8 +7,8 @@
             <tr>
                 <th>#</th>
                 <th>Nome</th>
-                <th>Montadora</th>
-                <th>Preço</th>
+                <th class="d-none d-md-table-cell">Montadora</th>
+                <th class="d-none d-md-table-cell">Preço</th>
                 <th>Ano</th>
                 <th class="text-end">Opções</th>
             </tr>
@@ -18,8 +18,8 @@
             <tr *ngFor="let car of cars">
                 <td>{{car.id}}</td>
                 <td>{{car.name}}</td>
-                <td>{{car.automaker}}</td>
-                <td>{{car.price}}</td>
+                <td class="d-none d-md-table-cell">{{car.automaker}}</td>
+                <td class="d-none d-md-table-cell">{{car.price}}</td>
                 <td>{{car.year}}</td>
                 <td class="text-end">
                     <button class="btn btn-success me-2" (click)="update(car)">Alterar</button>
