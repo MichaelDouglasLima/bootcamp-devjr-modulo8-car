@@ -55,7 +55,14 @@ export class CarsComponent {
   }
 
   remove(removeCar:Car){
+    
+    if (removeCar == this.car) {
+      this.car = { } as Car;
+      this.isUpdate = false;
+    }
+
     this.cars = this.cars.filter( c => c !== removeCar);
+    
   }
 
 }
